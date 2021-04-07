@@ -1,11 +1,11 @@
-version: "3.7"
+version: "3.9"
 
 services:
-  database_desafio:
+  database_ignite:
     image: postgres
     container_name: database_desafio
     restart: always
-    ports:
+    ports: 
       - 5432:5432
     environment:
       - POSTGRES_USER=postgres
@@ -13,7 +13,6 @@ services:
       - POSTGRES_DB=queries_challenge
     volumes:
       - pgdata:/data/postgres
-    
 volumes:
   pgdata:
-    driver: local
+    driver: local    
